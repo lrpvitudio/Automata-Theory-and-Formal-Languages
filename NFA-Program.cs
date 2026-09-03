@@ -49,7 +49,7 @@ class NFA
 
                     // q3
                     case "q3":
-                        if (symbol == 'a')
+                        if (symbol == 'l')
                             nextStates.Add("q2");
                         else if (symbol == '*')
                             nextStates.Add("q3");
