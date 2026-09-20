@@ -9,6 +9,14 @@ def dfa_board2(s):
         state = t[state][c]
     return state == 'CDE'
 
-# Test
-print("01: ", "Accepted" if dfa_board2("01") else "Rejected")
-print("11: ", "Accepted" if dfa_board2("11") else "Rejected")
+# 4 New Inputs: 2 Accepted, 2 Rejected
+tests_b2 = [
+    ("001",    True),   
+    ("00100",  True),   
+    ("101",    False),  
+    ("0000",   False)   
+]
+
+print("\n--- Board 2 Tests ---")
+for s, _ in tests_b2:
+    print(f"{s:<6} -> {'Accepted' if dfa_board2(s) else 'Rejected'}")
